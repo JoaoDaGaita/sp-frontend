@@ -39,7 +39,7 @@ export function Detail() {
   })
 
   return (
-    <div className="flex flex-col items-center pt-16 gap-10">
+    <div className="max-w-3xl flex flex-col items-center justify-center mx-auto pt-16 gap-10">
       <Card className="w-[450px] bg-slate-500 p-4">
         <CardTitle className="flex items-center justify-start">
           <img
@@ -58,28 +58,25 @@ export function Detail() {
         </CardTitle>
       </Card>
 
-
-
-      <Table className="w-[600px] overflow-hidden mb-10">
+      <Table>
         <TableHeader className="border-2 solid border-slate-600">
-          <TableRow className="">
-            <TableHead className="text-slate-900 font-bold">ID</TableHead>
-            <TableHead className="text-slate-900 font-bold">Name</TableHead>
-            <TableHead className="text-slate-900 font-bold">Url repos</TableHead>
+          <TableRow>
+            <TableHead>ID</TableHead>
+            <TableHead>Name</TableHead>
+            <TableHead>Url repos</TableHead>
           </TableRow>
         </TableHeader>
 
         <TableBody className="border-2 border-slate-600">
           {repositories?.map((repo) => {
             return (
-              <TableRow key={repo.id} className="border-2 border-slate-600">
-                <TableCell className="text-slate-900 font-bold">{repo.id}</TableCell>
-                <TableCell className="text-slate-900 font-bold">{repo.name}</TableCell>
-                <TableCell className="text-slate-900 font-bold">
+              <TableRow key={repo.id}>
+                <TableCell>{repo.id}</TableCell>
+                <TableCell>{repo.name}</TableCell>
+                <TableCell>
                   <Link to={repo.html_url} className="hover:text-slate-500" target="_blank" rel="noopener noreferrer">
                     {repo.html_url}
                   </Link>
-
                 </TableCell>
               </TableRow>
             )

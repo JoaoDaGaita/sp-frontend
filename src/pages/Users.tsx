@@ -59,12 +59,12 @@ export function Users() {
   }, [inView, fetchUsers])
 
   return (
-    <div className="p-6 max-w-5xl mx-auto space-y-4">
-      <h1 className="text-4xl font-medium">USERS</h1>
+    <div className="p-6 max-w-2xl mx-auto space-y-4">
+      <h1 className="text-4xl font-medium text-center">USERS</h1>
       <div className="border-2 rounded border-slate-600">
         <Table>
           <TableHeader>
-            <TableRow className="border-b-slate-600">
+            <TableRow>
               <TableHead>ID</TableHead>
               <TableHead>Login</TableHead>
               <TableHead>Profile Url</TableHead>
@@ -73,15 +73,15 @@ export function Users() {
           <TableBody>
             {userList.map((user) => {
               return (
-                <TableRow className="border-b-slate-600" key={user.id}>
+                <TableRow key={user.id}>
                   <TableCell>{user.id}</TableCell>
-                  <TableCell className="hover:text-slate-400">
+                  <TableCell>
                     <Link to={`http://localhost:5173/details/${user.login}/${user.id}`}>
                       {user.login}
                     </Link>
                   </TableCell>
-                  <TableCell className="hover:text-slate-400">
-                    <Link to={user.html_url}>
+                  <TableCell>
+                    <Link to={user.html_url} target="_blank" rel="noopener noreferrer">
                       {user.html_url}
                     </Link></TableCell>
                 </TableRow>
