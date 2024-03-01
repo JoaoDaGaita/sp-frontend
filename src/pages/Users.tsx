@@ -59,7 +59,7 @@ export function Users() {
   }, [inView, fetchUsers])
 
   return (
-    <div className="p-6 max-w-2xl mx-auto space-y-4">
+    <div className="p-6 max-w-2xl mx-auto space-y-4 pb-4">
       <h1 className="text-4xl font-medium text-center">USERS</h1>
       <div className="border-2 rounded border-slate-600">
         <Table className="pb-4">

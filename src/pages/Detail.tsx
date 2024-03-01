@@ -39,7 +39,7 @@ export function Detail() {
   })
 
   return (
-    <div className="max-w-3xl flex flex-col items-center justify-center mx-auto pt-16 gap-10">
+    <div className="max-w-3xl flex flex-col items-center justify-center mx-auto pt-16 gap-10 pb-4">
       <Card className="w-[450px] bg-slate-500 p-4">
         <CardTitle className="flex items-center justify-start">
           <img
@@ -58,7 +58,7 @@ export function Detail() {
         </CardTitle>
       </Card>
 
-      <Table className="pb-4">
+      <Table>
         <TableHeader className="border-2 solid border-slate-600">
           <TableRow>
             <TableHead>ID</TableHead>
