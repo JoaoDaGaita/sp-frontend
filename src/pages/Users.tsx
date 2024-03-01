@@ -76,7 +76,7 @@ export function Users() {
                 <TableRow key={user.id}>
                   <TableCell>{user.id}</TableCell>
                   <TableCell>
-                    <Link to={`https://sp-frontend-v11t.onrender.com/details/${user.login}/${user.id}`}>
+                    <Link to={`/details/${user.login}/${user.id}`}>
                       {user.login}
                     </Link>
                   </TableCell>
