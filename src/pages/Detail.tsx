@@ -58,7 +58,7 @@ export function Detail() {
         </CardTitle>
       </Card>
 
-      <Table>
+      <Table className="pb-4">
         <TableHeader className="border-2 solid border-slate-600">
           <TableRow>
             <TableHead>ID</TableHead>
