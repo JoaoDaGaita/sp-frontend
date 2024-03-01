@@ -24,7 +24,7 @@ export function Detail() {
   const { data: user } = useQuery<User>({
     queryKey: ['users'],
     queryFn: async () => {
-      const response = await axios.get(`http://localhost:3333/api/users/${params.login}/details`)
+      const response = await axios.get(`https://sp-backend-axpv.onrender.com/api/users/${params.login}/details`)
       return response.data
     },
   })
@@ -32,7 +32,7 @@ export function Detail() {
   const { data: repositories, isFetching } = useQuery<Repos[]>({
     queryKey: ['repositories'],
     queryFn: async () => {
-      const response = await axios.get(`http://localhost:3333/api/users/${params.login}/repos`)
+      const response = await axios.get(`https://sp-backend-axpv.onrender.com/api/users/${params.login}/repos`)
       return response.data
     },
     staleTime: 1000 * 60

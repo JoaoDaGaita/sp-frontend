@@ -37,7 +37,7 @@ export function Users() {
 
   async function fetchUsers() {
     const data =
-      (await axios.get<User[]>(`http://localhost:3333/api/users?since=${since}`)).data
+      (await axios.get<User[]>(`https://sp-backend-axpv.onrender.com/api/users?since=${since}`)).data
 
     if (data.length === 0) {
       setShowViewMore("End of Repos")
@@ -76,7 +76,7 @@ export function Users() {
                 <TableRow key={user.id}>
                   <TableCell>{user.id}</TableCell>
                   <TableCell>
-                    <Link to={`http://localhost:5173/details/${user.login}/${user.id}`}>
+                    <Link to={`https://sp-backend-axpv.onrender.com/details/${user.login}/${user.id}`}>
                       {user.login}
                     </Link>
                   </TableCell>
