@@ -59,9 +59,9 @@ export function Users() {
   }, [inView, fetchUsers])
 
   return (
-    <div className="p-6 max-w-2xl mx-auto space-y-4 pb-10">
-      <h1 className="text-4xl font-medium text-center">USERS</h1>
-      <div className="border-2 rounded border-slate-600">
+    <div className="p-6 max-w-3xl mx-auto space-y-4 pb-10">
+      <h1 className="text-4xl font-medium text-center">GITHUB USERS</h1>
+      <div className="border-2 rounded-md border-slate-600">
         <Table className="pb-4">
           <TableHeader>
             <TableRow>

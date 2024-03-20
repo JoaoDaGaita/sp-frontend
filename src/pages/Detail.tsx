@@ -41,7 +41,7 @@ export function Detail() {
   return (
     <div className="max-w-3xl flex flex-col items-center justify-center mx-auto pt-16 gap-10 pb-10">
       <Card className="w-[450px] bg-slate-500 p-4">
-        <CardTitle className="flex items-center justify-start">
+        <CardTitle className="flex items-start justify-start">
           <img
             src={user?.avatar_url}
             width={80}
@@ -49,15 +49,15 @@ export function Detail() {
             className="rounded-full"
           />
           <CardContent>
-            <p className="text-slate-800 text-lg">{user?.id}</p>
-            <h4 className="text-white text-xl capitalize">{user?.login}</h4>
+            <p className="text-slate-800 text-lg">Id: {user?.id}</p>
+            <h4 className="text-white text-xl capitalize">Login: {user?.login}</h4>
             {user &&
-              <p className="text-slate-700 text-xl capitalize">{format(new Date(user?.created_at), "dd MMMM yyyy")}</p>
+              <p className="text-slate-700 text-xl capitalize">Created: {format(new Date(user?.created_at), "dd MMMM yyyy")}</p>
             }
           </CardContent>
         </CardTitle>
       </Card>
-
+      <h1 className="text-4xl font-medium text-center">REPOSITORIES</h1>
       <Table>
         <TableHeader className="border-2 solid border-slate-600">
           <TableRow>
